@@ -4,6 +4,7 @@ const Button = ({
   backgroundColor,
   textcolor,
   borderColor,
+  fullWidth,
 }) => {
   return (
     <button
@@ -11,7 +12,9 @@ const Button = ({
         backgroundColor
           ? `${backgroundColor} ${textcolor}`
           : `bg-coral-red  text-white `
-      } rounded-full ${borderColor ? `${borderColor}` : `border-coral-red`}`}
+      } rounded-full ${borderColor ? `${borderColor}` : `border-coral-red`} ${
+        fullWidth && "w-full"
+      }`}
     >
       {label}
       {iconURL && (
